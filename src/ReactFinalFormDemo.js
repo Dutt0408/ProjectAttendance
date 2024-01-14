@@ -183,7 +183,7 @@ export const ReactFinalFormDemo = () => {
             }}
             validate={validate}
             render={({ handleSubmit }) => (
-              <form onSubmit={handleSubmit} className="p-fluid">
+              <form onSubmit={handleSubmit} className="p-fluid netlify">
                 <div style={{ display: "flex", gap: "10px" }}>
                   <Field
                     name="Fname"
