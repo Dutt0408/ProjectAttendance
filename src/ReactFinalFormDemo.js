@@ -3,7 +3,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import "./apple.css";
-
+import * as XLSX from 'xlsx';
 import React, { useEffect, useState } from "react";
 import { Form, Field } from "react-final-form";
 import { InputText } from "primereact/inputtext";
@@ -29,6 +29,13 @@ export const ReactFinalFormDemo = () => {
   const [date, setDate] = useState(null);
  
   const [selectedstats, setSelectedstats] = useState(null);
+  const createExcelFile = (formData) => {
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.json_to_sheet([formData]);
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet 1');
+    XLSX.writeFile(wb, 'public/RajipoMaster.xlsx');
+  };
+  
 
   const fieldsData = [
     {"id": 1, "name": "Mechanical"},
@@ -114,9 +121,11 @@ export const ReactFinalFormDemo = () => {
   const onSubmit = (data, form) => {
     setFormData(data);
     setShowMessage(true);
-
+    createExcelFile(data); // Add this line to create the Excel file
     form.restart();
   };
+  
+  
 
   const isFormFieldValid = (meta) => !!(meta.touched && meta.error);
   const getFormErrorMessage = (meta) => {
