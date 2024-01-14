@@ -1,0 +1,40 @@
+{
+    "data": [
+    
+        {
+            "name": "Toronto"
+        },
+        {
+            "name": "Etobicoke"
+        },
+        
+        {
+            "name": "Brampton"
+        },
+        
+        {
+            "name": "Mississauga"
+        },
+        
+        {
+            "name": "Barrie"
+        },
+        
+        {
+            "name": "Kitchner"
+        },
+        {
+            "name": "Cambridge"
+        },
+        {
+            "name": "Hamilton"
+        },
+        {
+            "name": "Oakville"
+        },
+        {
+            "name": "Scarborough"
+        }
+        
+    ]
+}
