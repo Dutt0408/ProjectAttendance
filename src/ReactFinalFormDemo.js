@@ -460,7 +460,7 @@ export const ReactFinalFormDemo = () => {
                           <div className="field" style={{ width: "100%" }}>
                             <span className="p-float-label">
                               <Dropdown
-                                id="fld"
+                                id="Field"
                                 options={fieldsOptions}
                                 onChange={(e) => console.log(e.value)} // Handle the selected value as needed
                                 placeholder="Select a Field"
@@ -469,7 +469,7 @@ export const ReactFinalFormDemo = () => {
                                 filterBy="label"
                               />
                               <label
-                                htmlFor="fld"
+                                htmlFor="Field"
                                 className={`${
                                   isFormFieldValid(meta) && "p-error"
                                 }`}
