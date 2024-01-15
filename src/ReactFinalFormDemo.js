@@ -271,19 +271,19 @@ export const ReactFinalFormDemo = () => {
                   )}
                 />
                 <Field
-                  name="PhN"
+                  name="PhoneNumber"
                   render={({ input, meta }) => (
                     <div className="field">
                       <span className="p-float-label">
                         <InputText
-                          id="PhN"
+                          id="PhoneNumber"
                           {...input}
                           className={` ${
                             isFormFieldValid(meta) && "p-invalid"
                           }`}
                         />
                         <label
-                          htmlFor="PhN"
+                          htmlFor="PhoneNumber"
                           className={`${isFormFieldValid(meta) && "p-error"}`}
                         >
                           Phone Number*
@@ -294,36 +294,36 @@ export const ReactFinalFormDemo = () => {
                   )}
                 />
                 <Field
-                  name="dob"
+                  name="DateofBirth"
                   render={({ input }) => (
                     <div className="field">
                       <span className="p-float-label">
                         <Calendar
-                          id="dob"
+                          id="DateofBirth"
                           {...input}
                           dateFormat="dd/mm/yy"
                           mask="99/99/9999"
                           showIcon
                         />
-                        <label htmlFor="dob">Date of Birth</label>
+                        <label htmlFor="DateofBirth">Date of Birth</label>
                       </span>
                     </div>
                   )}
                 />
                 <Field
-                  name="Add"
+                  name="Address"
                   render={({ input, meta }) => (
                     <div className="field" style={{ width: "100%" }}>
                       <span className="p-float-label">
                         <InputText
-                          id="Add"
+                          id="Address"
                           {...input}
                           className={` ${
                             isFormFieldValid(meta) && "p-invalid"
                           }`}
                         />
                         <label
-                          htmlFor="Add"
+                          htmlFor="Address"
                           className={`${isFormFieldValid(meta) && "p-error"}`}
                         >
                           Address
@@ -335,23 +335,23 @@ export const ReactFinalFormDemo = () => {
                 />
 
                 <Field
-                  name="citys"
+                  name="City"
                   render={({ input }) => (
                     <div className="field">
                       <span className="p-float-label">
                         <Dropdown
-                          id="citys"
+                          id="City"
                           {...input}
                           options={countries}
                           optionLabel="name"
                         />
-                        <label htmlFor="citys">City</label>
+                        <label htmlFor="City">City</label>
                       </span>
                     </div>
                   )}
                 />
                 <Field
-                  name="status"
+                  name="CanadianStatus"
                   render={({ input }) => (
                     <div className="field">
                       <span className="p-float-label">
@@ -367,7 +367,7 @@ export const ReactFinalFormDemo = () => {
                           placeholder="Select a City"
                           style={{ minWidth: "14rem" }}
                         />
-                        <label htmlFor="status">Canadian Status</label>
+                        <label htmlFor="CanadianStatus">Canadian Status</label>
                       </span>
                     </div>
                   )}
@@ -378,7 +378,7 @@ export const ReactFinalFormDemo = () => {
                     return (
                       <span className="one">
                         <Field
-                          name="college"
+                          name="InstitutionName"
                           render={({ input }) => (
                             <div className="field">
                               <span className="p-float-label">
@@ -398,7 +398,7 @@ export const ReactFinalFormDemo = () => {
                         />
                         <div style={{ display: "flex", gap: "10px" }}>
                           <Field
-                            name="Cname"
+                            name="CourseName"
                             render={({ input, meta }) => (
                               <div className="field" style={{ width: "50%" }}>
                                 <span className="p-float-label">
@@ -423,7 +423,7 @@ export const ReactFinalFormDemo = () => {
                             )}
                           />
                           <Field
-                            name="Gradyear"
+                            name="ExpectedGraduation"
                             render={({ input, meta }) => (
                               <div className="field" style={{ width: "50%" }}>
                                 <span className="p-float-label">
@@ -455,7 +455,7 @@ export const ReactFinalFormDemo = () => {
                   ) {
                     return (
                       <Field
-                        name="fld"
+                        name="Field "
                         render={({ input, meta }) => (
                           <div className="field" style={{ width: "100%" }}>
                             <span className="p-float-label">
