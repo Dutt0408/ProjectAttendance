@@ -4,7 +4,7 @@ import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import "./apple.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Form, Field } from "react-final-form";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
@@ -15,47 +15,136 @@ import { Dialog } from "primereact/dialog";
 import { createRoot } from "react-dom/client";
 import { CascadeSelect } from "primereact/cascadeselect";
 
-import { CountryService } from "./CountryService";
-import { CollegeService } from "./CollegeService";
+
+
 import "./FormDemo.css";
 
 export const ReactFinalFormDemo = () => {
-  const [countries, setCountries] = useState([]);
-  const [Colleges, setColleges] = useState([]);
+
+
   const [showMessage, setShowMessage] = useState(false);
   const [formData] = useState({});
-  const countryservice = new CountryService();
-  const collegeservice = new CollegeService();
+ 
+
   const [date, setDate] = useState(null);
 
   const [selectedstats, setSelectedstats] = useState(null);
 
   const fieldsData = [
-    { id: 1, name: "Mechanical" },
-    { id: 2, name: "Information Technology (IT)" },
-    { id: 3, name: "Medical" },
-    { id: 4, name: "Finance" },
-    { id: 5, name: "Education" },
-    { id: 6, name: "Engineering" },
-    { id: 7, name: "Marketing" },
-    { id: 8, name: "Art and Design" },
-    { id: 9, name: "Science" },
-    { id: 10, name: "Agriculture" },
-    { id: 11, name: "Healthcare" },
-    { id: 12, name: "Law" },
-    { id: 13, name: "Environmental Science" },
-    { id: 14, name: "Social Work" },
-    { id: 15, name: "Media and Communication" },
-    { id: 16, name: "Human Resources" },
-    { id: 17, name: "Architecture" },
-    { id: 18, name: "Telecommunications" },
-    { id: 19, name: "Biotechnology" },
-    { id: 20, name: "Pharmaceuticals" },
+    { id: "Mechanical", name: "Mechanical" },
+    { id: "IT", name: "Information Technology (IT)" },
+    { id: "Medical", name: "Medical" },
+    { id: "Finance", name: "Finance" },
+    { id: "Education", name: "Education" },
+    { id: "Engineering", name: "Engineering" },
+    { id: "Art&Design", name: "Art and Design" },
+    { id: "Science", name: "Science" },
+    { id: "Agriculture", name: "Agriculture" },
+    { id: "Healthcare", name: "Healthcare" },
+    { id: "Law", name: "Law" },
+    { id: "Environmental Science", name: "Environmental Science" },
+    { id: "Social Work", name: "Social Work" },
+    { id: "Media and Communication", name: "Media and Communication" },
+    { id: "Human Resources", name: "Human Resources" },
+    { id: "Architecture", name: "Architecture" },
+    { id: "Telecommunications", name: "Telecommunications" },
+    { id: "Biotechnology", name: "Biotechnology" },
+    { id: "Pharmaceuticals", name: "Pharmaceuticals" },
+    { id: "Others", name: "Others" },
   ];
+
+
   const fieldsOptions = fieldsData.map((field) => ({
     label: field.name,
     value: field.id,
   }));
+
+
+  const city = [
+    { name: "Toronto", id: "Toronto" },
+    { name: "NorthYork", id: "Northyork" },
+    { name: "Etobicoke", id: "Etobicoke" },
+    { name: "Brampton", id: "Brampton" },
+    { name: "Mississauga", id: "Mississauga" },
+    { name: "Barrie", id: "Barrie" },
+    { name: "Kitchner", id: "Kitchner" },
+    { name: "Cambridge", id: "Cambridge" },
+    { name: "Hamilton", id: "Hamilton" },
+    { name: "Oakville", id: "Oakville" },
+    { name: "Scarborough", id: "Scarborough" }
+  ];
+
+
+  const cito = city.map((city) => ({
+    label: city.name,
+    value: city.id,
+  }));
+
+  const college = [
+    {"name": "Algoma University", "id": "Algoma University"},
+    {"name": "Brock University", "id": "Brock University"},
+    {"name": "Carleton University", "id": "Carleton University"},
+    {"name": "College Dominicain", "id": "College Dominicain"},
+    {"name": "Charles Sturt University, Ontario", "id": "Charles Sturt University, Ontario"},
+    {"name": "Lakehead University", "id": "Lakehead University"},
+    {"name": "Laurentian University", "id": "Laurentian University"},
+    {"name": "Huntington University", "id": "Huntington University"},
+    {"name": "Thorneloe University", "id": "Thorneloe University"},
+    {"name": "Université de Hearst", "id": "Université de Hearst"},
+    {"name": "University of Sudbury", "id": "University of Sudbury"},
+    {"name": "McMaster University", "id": "McMaster University"},
+    {"name": "Nipissing University", "id": "Nipissing University"},
+    {"name": "OCAD University (Ontario College of Art and Design)", "id": "OCAD University (Ontario College of Art and Design)"},
+    {"name": "Queen's University", "id": "Queen's University"},
+    {"name": "Royal Military College of Canada", "id": "Royal Military College of Canada"},
+    {"name": "Ryerson University", "id": "Ryerson University"},
+    {"name": "Trent University", "id": "Trent University"},
+    {"name": "University of Guelph", "id": "University of Guelph"},
+    {"name": "University of Guelph-Humber", "id": "University of Guelph-Humber"},
+    {"name": "University of Ontario Institute of Technology", "id": "University of Ontario Institute of Technology"},
+    {"name": "University of Ottawa", "id": "University of Ottawa"},
+    {"name": "Saint Paul University", "id": "Saint Paul University"},
+    {"name": "University of Toronto", "id": "University of Toronto"},
+    {"name": "Ontario Institute for Studies in Education (OISE)", "id": "Ontario Institute for Studies in Education (OISE)"},
+    {"name": "St. Michael's College", "id": "St. Michael's College"},
+    {"name": "Trinity College", "id": "Trinity College"},
+    {"name": "Victoria University, including Emmanuel College", "id": "Victoria University, including Emmanuel College"},
+    {"name": "University of Waterloo", "id": "University of Waterloo"},
+    {"name": "St. Jerome's University", "id": "St. Jerome's University"},
+    {"name": "St. Paul's University College", "id": "St. Paul's University College"},
+    {"name": "University of Western Ontario", "id": "University of Western Ontario"},
+    {"name": "Huron College", "id": "Huron College"},
+    {"name": "University of Windsor", "id": "University of Windsor"},
+    {"name": "Assumption University", "id": "Assumption University"},
+    {"name": "Wilfrid Laurier University", "id": "Wilfrid Laurier University"},
+    {"name": "York University", "id": "York University"},
+    {"name": "Algonquin College", "id": "Algonquin College"},
+    {"name": "Centennial College", "id": "Centennial College"},
+    {"name": "Conestoga College", "id": "Conestoga College"},
+    {"name": "Confederation College", "id": "Confederation College"},
+    {"name": "Fanshawe College", "id": "Fanshawe College"},
+    {"name": "Fleming College", "id": "Fleming College"},
+    {"name": "George Brown College", "id": "George Brown College"},
+    {"name": "Georgian College", "id": "Georgian College"},
+    {"name": "Humber College", "id": "Humber College"},
+    {"name": "La Cité Collégiale", "id": "La Cité Collégiale"},
+    {"name": "Lambton College", "id": "Lambton College"},
+    {"name": "Loyalist College", "id": "Loyalist College"},
+    {"name": "Mohawk College", "id": "Mohawk College"},
+    {"name": "Niagara College", "id": "Niagara College"},
+    {"name": "St. Clair College", "id": "St. Clair College"},
+    {"name": "St. Lawrence College", "id": "St. Lawrence College"},
+    {"name": "Seneca College", "id": "Seneca College"},
+    {"name": "Sheridan College", "id": "Sheridan College"}
+  ];
+
+
+  const collego = college.map((college) => ({
+    label: college.name,
+    value: college.id,
+  }));
+
+
   const Status = [
     {
       name: "Student",
@@ -83,13 +172,8 @@ export const ReactFinalFormDemo = () => {
     },
   ];
 
-  useEffect(() => {
-    countryservice.getCountries().then((data) => setCountries(data));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    collegeservice.getColleges().then((data) => setColleges(data));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+ 
+ 
   const validate = (data) => {
     let errors = {};
 
@@ -111,11 +195,14 @@ export const ReactFinalFormDemo = () => {
   };
 
   function Submit() {
+    
     const formEle = document.querySelector("form");
     const formData = new FormData(formEle);
+    console.log("FormData:", formData);
 
     const data = {};
     formData.forEach((value, key) => {
+     
       // Handle checkboxes separately to ensure boolean value
       data[key] = key === "accept" ? value === "on" : value;
     });
@@ -341,9 +428,12 @@ export const ReactFinalFormDemo = () => {
                       <span className="p-float-label">
                         <Dropdown
                           id="City"
+                          options={cito}
+                          
                           {...input}
-                          options={countries}
-                          optionLabel="name"
+
+                          
+                          optionLabel="label"
                         />
                         <label htmlFor="City">City</label>
                       </span>
@@ -356,6 +446,8 @@ export const ReactFinalFormDemo = () => {
                     <div className="field">
                       <span className="p-float-label">
                         <CascadeSelect
+                          id="CanadianStatus"
+                          {...input}
                           value={selectedstats}
                           onChange={(e) => setSelectedstats(e.value)}
                           options={Status}
@@ -364,7 +456,7 @@ export const ReactFinalFormDemo = () => {
                           optionGroupChildren={["states", "cities"]}
                           className="w-full md:w-14rem"
                           breakpoint="767px"
-                          placeholder="Select a City"
+                        
                           style={{ minWidth: "14rem" }}
                         />
                         <label htmlFor="CanadianStatus">Canadian Status</label>
@@ -383,11 +475,11 @@ export const ReactFinalFormDemo = () => {
                             <div className="field">
                               <span className="p-float-label">
                                 <Dropdown
-                                  id="Colleges"
+                                  id="InstitutionName"
+                                  options={collego}
                                   {...input}
-                                  options={Colleges}
                                   // filter
-                                  optionLabel="name"
+                                  optionLabel="label"
                                 />
                                 <label htmlFor="country">
                                   Institution Name
@@ -428,6 +520,8 @@ export const ReactFinalFormDemo = () => {
                               <div className="field" style={{ width: "50%" }}>
                                 <span className="p-float-label">
                                   <Calendar
+                                  id="ExpectedGraduation"
+                                  {...input}
                                     value={date}
                                     onChange={(e) => setDate(e.value)}
                                     view="month"
@@ -446,8 +540,10 @@ export const ReactFinalFormDemo = () => {
                               </div>
                             )}
                           />
+                          
                         </div>
                       </span>
+                      
                     );
                   } else if (
                     selectedstats &&
@@ -455,17 +551,18 @@ export const ReactFinalFormDemo = () => {
                   ) {
                     return (
                       <Field
-                        name="Field "
+                        name="Field"
                         render={({ input, meta }) => (
                           <div className="field" style={{ width: "100%" }}>
                             <span className="p-float-label">
                               <Dropdown
                                 id="Field"
                                 options={fieldsOptions}
-                                onChange={(e) => console.log(e.value)} // Handle the selected value as needed
+
                                 placeholder="Select a Field"
                                 optionLabel="label"
-                                showClear
+
+                                {...input}
                                 filterBy="label"
                               />
                               <label
@@ -481,6 +578,9 @@ export const ReactFinalFormDemo = () => {
                           </div>
                         )}
                       />
+
+                      
+                      
                     );
                   }
                 })()}
