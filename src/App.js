@@ -2,7 +2,7 @@
 // import './App.css';
 // import './index.css'
 
-import Navbar from './navbar'
+import Confirmation from './Confirmation'
 // import { ReactFinalFormDemo } from "./ReactFinalFormDemo";
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
    <>
 
-    <Navbar/> 
+    <Confirmation/> 
     
         {/* <ReactFinalFormDemo/> */}
 
