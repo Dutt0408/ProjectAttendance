@@ -2,7 +2,7 @@
   box-sizing:border-box;
   margin:0;
   padding:0;
-  font-size: 22px;
+  font-size: 42px;
 }
 html,
 body {
@@ -14,11 +14,12 @@ body {
   font-family: arial;
 }
 .cookie-card {
-  max-width: 493px;
+  max-width: 693px;
   padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+  height: 700px;
 }
 
 .title {
