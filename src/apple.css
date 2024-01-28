@@ -14,12 +14,12 @@ body {
   font-family: arial;
 }
 .cookie-card {
-  max-width: 693px;
-  padding: 4rem;
+  max-width: 864px;
+  padding: 1rem;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
-  height: 800px;
+  height: 878px;
 }
 
 .title {
@@ -48,7 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 5rem;
   -moz-column-gap: 1rem;
   column-gap: 1rem;
   flex-shrink: 0;
