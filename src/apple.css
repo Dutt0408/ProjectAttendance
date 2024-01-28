@@ -2,7 +2,9 @@
 html {
     font-size: 50px;
 }
-
+.p-float-label label {
+    font-size: 30px !important;
+}
 
 
 body {
