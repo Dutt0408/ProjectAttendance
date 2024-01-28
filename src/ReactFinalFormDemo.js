@@ -210,7 +210,7 @@ export const ReactFinalFormDemo = () => {
     console.log("Sending data:", data);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxUCpwF0822k5nZb_rf8kVOkEVrdBfohUArvUW3qRUYgfANZXKI0-GjXlk2GO9Ltcry/exec",
+      "https://script.google.com/macros/s/AKfycbwa6l3OOdLhb0kKXDP9o68H8flPEZRTLn06QCbWOl5oowJqz2neAvHkkqELBvZpDcZq/exec",
       {
         method: "POST",
         headers: {
@@ -284,7 +284,7 @@ export const ReactFinalFormDemo = () => {
             }}
             validate={validate}
             render={({ handleSubmit }) => (
-              <form action="https://script.google.com/macros/s/AKfycbxUCpwF0822k5nZb_rf8kVOkEVrdBfohUArvUW3qRUYgfANZXKI0-GjXlk2GO9Ltcry/exec" method="post" className="p-fluid netlify">
+              <form action="https://script.google.com/macros/s/AKfycbwa6l3OOdLhb0kKXDP9o68H8flPEZRTLn06QCbWOl5oowJqz2neAvHkkqELBvZpDcZq/exec" method="post" className="p-fluid netlify">
                 <div style={{ display: "flex", gap: "10px" }}>
                   <Field
                     name="FirstName"
