@@ -3,7 +3,8 @@
 // import './index.css'
 
 import Navbar from './navbar'
-// import { ReactFinalFormDemo } from "./ReactFinalFormDemo";
+import Confimation from './Confirmation'
+
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
    <>
 
     <Navbar/> 
+    <Confimation/>
     
-        {/* <ReactFinalFormDemo/> */}
+       
 
    </>
   );

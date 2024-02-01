@@ -18,7 +18,7 @@ function PhoneNumberCheck() {
     const PhoneNumber = values.PhoneNumber;
 
     try {
-      const response = await fetch(`https://script.google.com/macros/s/AKfycbxNtu82rVyogIhCyZZmDlc-AdTVsu8_xz2dCt-E8WRcQo51Bcdmg9nt9gPIyE6Thns3/exec?PhoneNumber=${PhoneNumber}`);
+      const response = await fetch(`https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec?PhoneNumber=${PhoneNumber}`);
       const data = await response.json();
 
       if (data.exists) {
@@ -48,7 +48,7 @@ function PhoneNumberCheck() {
           PhoneNumber: '',
         }}
         render={({ handleSubmit }) => (
-          <form action="https://script.google.com/macros/s/AKfycbxNtu82rVyogIhCyZZmDlc-AdTVsu8_xz2dCt-E8WRcQo51Bcdmg9nt9gPIyE6Thns3/exec" method="post" className="p-fluid netlify">
+          <form action="https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec" method="post" className="p-fluid netlify">
             <Field
               name="PhoneNumber"
               render={({ input }) => (
@@ -60,7 +60,10 @@ function PhoneNumberCheck() {
                 </div>
               )}
             />
+
+            
             <Button type="submit" label="Check Phone Number" className="mt-2" />
+            
           </form>
         )}
       />
