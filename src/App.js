@@ -3,7 +3,7 @@
 // import './index.css'
 
 import Navbar from './navbar'
-import Confimation from './Confirmation'
+
 
 
 
@@ -12,7 +12,7 @@ function App() {
    <>
 
     <Navbar/> 
-    <Confimation/>
+   
     
        
 

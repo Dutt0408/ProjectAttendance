@@ -48,21 +48,21 @@ function PhoneNumberCheck() {
           PhoneNumber: '',
         }}
         render={({ handleSubmit }) => (
-          <form action="https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec" method="post" className="p-fluid netlify">
+          <form action="https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec" method="post" className="p-fluid netlify" style={{ marginTop: '24em' }}>
             <Field
               name="PhoneNumber"
               render={({ input }) => (
                 <div className="field">
                   <span className="p-float-label">
                     <InputText id="PhoneNumber" {...input} />
-                    <label htmlFor="PhoneNumber">Phone Number*</label>
+                    <label htmlFor="PhoneNumber">Enter Your Phone Number</label>
                   </span>
                 </div>
               )}
             />
 
             
-            <Button type="submit" label="Check Phone Number" className="mt-2" />
+            <Button type="submit" label="Attend Sabha" className="mt-2" />
             
           </form>
         )}
