@@ -406,7 +406,7 @@ export const ReactFinalFormDemo = () => {
                     </div>
                   )}
                 />
-                <Field
+                {/* <Field
                   name="DateofBirth"
                   render={({ input }) => (
                     <div className="field">
@@ -422,7 +422,7 @@ export const ReactFinalFormDemo = () => {
                       </span>
                     </div>
                   )}
-                />
+                /> */}
                 <Field
                   name="Address"
                   render={({ input, meta }) => (
