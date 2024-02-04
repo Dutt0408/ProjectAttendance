@@ -140,7 +140,8 @@ export const ReactFinalFormDemo = () => {
     {"name": "St. Clair College", "id": "St. Clair College"},
     {"name": "St. Lawrence College", "id": "St. Lawrence College"},
     {"name": "Seneca College", "id": "Seneca College"},
-    {"name": "Sheridan College", "id": "Sheridan College"}
+    {"name": "Sheridan College", "id": "Sheridan College"},
+    {"name": "Humber College", "id": "Humber College"}
   ];
 
 
