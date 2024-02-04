@@ -181,23 +181,36 @@ export const ReactFinalFormDemo = () => {
  
   const validate = (data) => {
     let errors = {};
-
-    if (!data.name) {
-      errors.name = "Name is required.";
+  
+    if (!data.FirstName) {
+      errors.FirstName = "First Name is required.";
     }
-
-    if (!data.email) {
-      errors.email = "Email is required.";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
-      errors.email = "Invalid email address. E.g. example@email.com";
+  
+    if (!data.LastName) {
+      errors.LastName = "Last Name is required.";
     }
-
+  
+    if (!data.Email) {
+      errors.Email = "Email is required.";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.Email)) {
+      errors.Email = "Invalid email address. E.g. example@email.com";
+    }
+  
+    if (!data.PhoneNumber) {
+      errors.PhoneNumber = "Phone Number is required.";
+    }
+  
+    if (!data.CanadianStatus) {
+      errors.CanadianStatus = "Canadian Status is required.";
+    }
+  
     if (!data.accept) {
       errors.accept = "You need to agree to the terms and conditions.";
     }
-
+  
     return errors;
   };
+  
 
   function Submit() {
     
