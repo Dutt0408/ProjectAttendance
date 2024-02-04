@@ -3,6 +3,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import "./apple.css";
+import "./image.css"
 
 import React, { useState } from "react";
 import { Form, Field } from "react-final-form";
@@ -14,6 +15,10 @@ import { Checkbox } from "primereact/checkbox";
 import { Dialog } from "primereact/dialog";
 import { createRoot } from "react-dom/client";
 import { CascadeSelect } from "primereact/cascadeselect";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -247,7 +252,15 @@ export const ReactFinalFormDemo = () => {
   );
 
   return (
+    
     <div className="form-demo">
+       <div className="header">
+        <img className="imgheader" src="https://na.baps.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero2.79f635ad.jpg&w=3840&q=75" alt="HeaderImage"  />
+        <div className="header-text">
+        <h1 className="RegText"> Sabha Registration</h1>
+        </div>
+      </div>
+
       <Dialog
         visible={showMessage}
         onHide={() => setShowMessage(false)}
@@ -270,7 +283,7 @@ export const ReactFinalFormDemo = () => {
 
       <div className="flex justify-center" style={{ justifyContent: "center" }}>
         <div className="card">
-          <h5 className="text-center text-lg">Register</h5>
+       
           <Form
             onSubmit={Submit}
             initialValues={{
@@ -615,6 +628,29 @@ export const ReactFinalFormDemo = () => {
             )}
           />
         </div>
+      </div>
+ {/* Footer */}
+ <div className="footer">
+        <div className="textsfoot">
+       
+        <li className="Fmail" >
+  <a className="Fmail" href="mailto:coming2canada@samp.ca">
+    <FontAwesomeIcon icon={faEnvelope} />
+    &nbsp; coming2canada@samp.ca
+  </a>
+</li>
+
+          <li className="FText">
+  
+  
+  <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html" className="FText">
+    <FontAwesomeIcon icon={faGraduationCap} />
+    &nbsp; Learning Institutes
+  </a>
+</li>
+
+        </div>
+        <img src="https://www.neasdentemple.org/footer/bapsLogo.png" alt="FooterImage" />
       </div>
     </div>
   );
