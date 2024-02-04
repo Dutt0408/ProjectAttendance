@@ -4,7 +4,7 @@ import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 import "./apple.css";
 import "./Images.css"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Field } from 'react-final-form';
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
@@ -25,9 +25,11 @@ export const photos = [
 
 
 function PhoneNumberCheck({ onConfirmation }) {
- 
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [, setQrCodeCanvas] = useState(null);
+ const [phoneNumber, setPhoneNumber] = useState('');
   const [showQRCode, setShowQRCode] = useState(false);
+  const [canvasRef, setCanvasRef] = useState(null);
+ 
   const Qrclick = () => {
     setShowQRCode(!showQRCode);
   };
@@ -47,6 +49,24 @@ function PhoneNumberCheck({ onConfirmation }) {
       }
     } catch (error) {
       console.error("Error:", error);
+    }
+  };
+  useEffect(() => {
+    // Ensure that the canvasRef is set after the component is mounted
+    setCanvasRef(document.getElementById('qrcode-canvas'));
+  }, [showQRCode]); // Add showQRCode as a dependency to trigger the effect when it changes
+  
+
+ const handleDownload = () => {
+    if (canvasRef) {
+      const dataUrl = canvasRef.toDataURL();
+
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = 'Attendance_Code.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     }
   };
 
@@ -81,10 +101,14 @@ function PhoneNumberCheck({ onConfirmation }) {
                     <InputText
                       id="PhoneNumber"
                       {...input}
+                      type="tel"
                       onChange={(e) => {
-                        input.onChange(e);
-                        setPhoneNumber(e.target.value);
-                        onConfirmation(e.target.value); // Update QR code live
+                        const numericValue = e.target.value.replace(/\D/g, '');
+                        const limitedValue = numericValue.slice(0, 10);
+
+                        input.onChange(limitedValue);
+    setPhoneNumber(limitedValue);
+    onConfirmation(limitedValue);
                       }}
                     />
                     <label htmlFor="PhoneNumber">Enter Your Phone Number </label>
@@ -94,12 +118,22 @@ function PhoneNumberCheck({ onConfirmation }) {
                 </div>
               )}
             />
-<div className="btncontainer">
+   <div className="btncontainer">
         <div className="btncontainerr">
-          <Button type="submit" label="Attend Sabha" className="mt-2 btnspecific" />
-          </div>
-          <div className="btncontainerr1">
-          <Button type="button" className="mt-2 btnspecificc" onClick={Qrclick}>
+          <Button
+            type="submit"
+            label="Attend Sabha"
+            className="mt-2 btnspecific"
+            disabled={phoneNumber.length !== 10}
+          />
+        </div>
+        <div className="btncontainerr1">
+          <Button
+            type="button"
+            className="mt-2 btnspecificc"
+            onClick={Qrclick}
+            disabled={phoneNumber.length !== 10}
+          >
             <FontAwesomeIcon className="Bcode" icon={faQrcode} />
             
           </Button>
@@ -119,11 +153,12 @@ function PhoneNumberCheck({ onConfirmation }) {
 
        {showQRCode && (
       <div className="Qr">
-        <QRCode value={phoneNumber} />
-        <Button type="button" className=" dwn" onClick={Qrclick}>
-            <FontAwesomeIcon  icon={faArrowDown} />
-            
-          </Button>
+      <QRCode value={phoneNumber} ref={(canvas) => setQrCodeCanvas(canvas)} id="qrcode-canvas" />
+
+       <Button type="button" className="dwn" onClick={handleDownload}>
+  <FontAwesomeIcon icon={faArrowDown} />
+</Button>
+
       </div>
     )}
 
