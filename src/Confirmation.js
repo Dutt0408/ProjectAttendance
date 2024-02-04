@@ -1,36 +1,20 @@
 import React from 'react';
 import './apple.css'
+import './Images.css'
 
 export default function Confirmation() {
   
 
   return (
     <div className="cookie-card">
-      <span className="title">Thankyou for Attending </span> 
+  <h1 className="RegText">Thankyou </h1>
       <p className="description">
-      <br></br><b>Topic:</b> Embaracing the Good In Others <br></br>
-        <br></br>
-        <b> Venue: </b> BAPS Swaminarayan Temple ,Toronto 
+      <br></br>Thankyou for Attending International Student Sabha at  
+       <b> BAPS Swaminarayan Temple  </b> <br></br><br></br>Please Click Below  to join Whatsapp Community for Updates on <b>Job, Accomodation and Announcements</b>
         </p>
-        <p className="description">
-        <b>  Date: </b> January 28th ,2024
        
-
-
-
-        <br />
-        <br />
-        <a href="https://www.baps.org/Global-Network/North-America/Toronto/News.aspx">Previous Events</a>.
-      </p>
       <div className="actions">
-      <button
-  className="accept"
-  onClick={() => {
-    window.open('https://na.baps.org/learn', '_blank');
-  }}
->
-  Learn
-</button>
+     
 
         <button
   className="accepts"
@@ -38,7 +22,7 @@ export default function Confirmation() {
     window.open('https://chat.whatsapp.com/EUHAkZP5OdVKWDbnq3Ux5r', '_blank');
   }}
 >
-   Whatsapp Group
+   Whatsapp Community
 </button>
 
       </div>

@@ -48,10 +48,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 1rem;
   -moz-column-gap: 1rem;
   column-gap: 1rem;
   flex-shrink: 0;
+  flex-direction: column;
 }
 
 .pref {
@@ -93,7 +94,7 @@ body {
 }
 
 .accepts:hover {
-  background-color: rgb(78, 175, 93);
+  background-color: #585af0;
 }
 
 .accepts:focus {
@@ -105,8 +106,8 @@ body {
   line-height: 1rem;
   background-color: rgb(17 24 39);
   font-weight: 500;
-  background: #36a36c;
-  border: 1px solid #45ac7a;
+  background: #6366f1;
+  border: 1px solid #6366f1;
   border-radius: 6px;
   color: #fff;
   padding: 0.75rem 1.25rem;

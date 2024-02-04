@@ -1,20 +1,16 @@
-
 // import './App.css';
 // import './index.css'
-
-import Confirmation from './Confirmation'
-// import { ReactFinalFormDemo } from "./ReactFinalFormDemo";
-
+import { Routes, Route } from "react-router-dom";
+import Confirmation from './Confirmation';
+import Abc from './abc';
 
 function App() {
   return (
-   <>
-
-    <Confirmation/> 
-    
-        {/* <ReactFinalFormDemo/> */}
-
-   </>
+    <Routes>
+      <Route path="/" element={<Confirmation />} />
+      <Route path="/abc" element={<Abc />} />
+      {/* Add more routes if needed */}
+    </Routes>
   );
 }
 
