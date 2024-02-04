@@ -29,9 +29,13 @@ function PhoneNumberCheck({ onConfirmation }) {
  const [phoneNumber, setPhoneNumber] = useState('');
   const [showQRCode, setShowQRCode] = useState(false);
   const [canvasRef, setCanvasRef] = useState(null);
+  const [isAttendButtonDisabled, setAttendButtonDisabled] = useState(true);
  
   const Qrclick = () => {
     setShowQRCode(!showQRCode);
+    setAttendButtonDisabled(false ,{ color: 'black' });
+ 
+
   };
   const onSubmit = async (values) => {
     const phoneNumber = values.PhoneNumber;
@@ -122,9 +126,13 @@ function PhoneNumberCheck({ onConfirmation }) {
         <div className="btncontainerr">
           <Button
             type="submit"
+            
             label="Attend Sabha"
             className="mt-2 btnspecific"
-            disabled={phoneNumber.length !== 10}
+            disabled={isAttendButtonDisabled} 
+            style={{ backgroundColor: isAttendButtonDisabled ? '#6164f2' : '##6164f4' }} // Change the color based on the disabled state
+            
+
           />
         </div>
         <div className="btncontainerr1">
