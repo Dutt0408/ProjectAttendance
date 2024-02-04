@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cinzel:wght@400..900&family=Mate+SC&display=swap');
+
+
+  .imgheader {
+    width: 100%;
+    height: auto; /* To maintain the aspect ratio */
+    object-fit: cover;
+
+  }
+  .imgheader {
+    height: 35vh;
+    overflow: hidden; /* Ensures no content overflow */
+  }
+  .footer{
+    background-color: #cccccc84;
+    height: 8.3em;
+  }
+  
+  .footer img {
+    width: 10%;
+    float: right;
+    margin-top: 1em;
+    height: auto; /* To maintain the aspect ratio */
+    margin-right: 10px;
+
+  }
+  .textsfoot{
+    float: left;
+    margin-top: 10px;
+    
+  }
+  .Fmail{
+    text-decoration: none;
+    color:#4f4f4f;
+    font-size: 13px;
+    margin-top: 1em;
+    margin-left: 1em;
+    list-style: none
+
+    
+  }
+  .FText{
+    text-decoration: none;
+    color:#4f4f4f;
+    font-size: 13px;
+    margin-top: 1em;
+    margin-left: 1em;
+    list-style: none
+
+    
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .InputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6em;
+    margin-bottom: 5em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  
+.RegText{
+    /* margin-top: -4em; */
+    opacity: 0.7;
+    font-family: "Mate SC", serif;
+    margin-top: 2em;
+    font-size: 3em;
+text-align: center;
+    color:#6e6c6c;
+}
+.p-inputtext {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+/* Add this CSS to your existing styles */
+.btncontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4em;
+    margin-left: 6em;
+    margin-right: 5em;
+  }
+  
+  .btncontainerr {
+    text-align: center;
+  }
+  
+  .btnspecific {
+    width: 11em;
+    margin-right: 1em;
+  }
+  
+  .btnspecificc {
+    text-align: center;
+    padding: 11.5px;
+    padding-right: 13px;
+  }
+  
+  
+  .Qr {
+    text-align: center;
+    margin-top: -2em;
+    margin-bottom: 5em;
+    margin-left: 5em;
+
+  }
+  .dwn{
+    margin-left:1em;
+    margin-top: 12em;
+    margin-bottom: -3em;
+
+  }

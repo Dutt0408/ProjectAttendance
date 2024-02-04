@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Confirmation from './Confirmation';
 import Navbar from './navbar';
 
-
 function App() {
   const [confirmationValue, setConfirmationValue] = useState('');
 
@@ -16,9 +15,9 @@ function App() {
       />
       <Route
         path="/"
-        element={<Navbar onConfirmation={(value) => setConfirmationValue(value)}      qrCodeValue={confirmationValue} />}
+        element={<Navbar onConfirmation={(value) => setConfirmationValue(value)} />}
       />
-     
+      {/* Add more routes if needed */}
     </Routes>
   );
 }
