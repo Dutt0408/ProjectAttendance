@@ -153,11 +153,13 @@ function PhoneNumberCheck({ onConfirmation }) {
 
        {showQRCode && (
       <div className="Qr">
+        <p className="red">Save this QR code for Automated attendance* </p>
       <QRCode value={phoneNumber} ref={(canvas) => setQrCodeCanvas(canvas)} id="qrcode-canvas" />
 
        <Button type="button" className="dwn" onClick={handleDownload}>
   <FontAwesomeIcon icon={faArrowDown} />
 </Button>
+
 
       </div>
     )}
