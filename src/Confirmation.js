@@ -9,8 +9,8 @@ export default function Confirmation() {
     <div className="cookie-card">
   <h1 className="RegText">Thankyou </h1>
       <p className="description">
-      <br></br>Thankyou for Attending International Student Sabha at  
-       <b> BAPS Swaminarayan Temple  </b> <br></br><br></br>Please Click Below  to join Whatsapp Community for Updates on <b>Job, Accomodation and Announcements</b>
+      <br></br>Thankyou for Attending International Student Event at  
+       <b> XYZ Community </b> <br></br><br></br>Please Click Below  to join Whatsapp Community for Updates on <b>Job, Accomodation and Announcements</b>
         </p>
        
       <div className="actions">
@@ -19,7 +19,7 @@ export default function Confirmation() {
         <button
   className="accepts"
   onClick={() => {
-    window.open('https://chat.whatsapp.com/EUHAkZP5OdVKWDbnq3Ux5r', '_blank');
+    window.open('https://web.whatsapp.com/', '_blank');
   }}
 >
    Whatsapp Community
