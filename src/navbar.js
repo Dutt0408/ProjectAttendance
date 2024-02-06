@@ -19,7 +19,7 @@ import QRCode from 'qrcode.react';
 export const photos = [
       {
           
-          text: "Hello"
+          text: "Helo"
       },
   ];
 
@@ -127,7 +127,7 @@ function PhoneNumberCheck({ onConfirmation }) {
           <Button
             type="submit"
             
-            label="Attend Sabha"
+            label="Attend Event"
             className="mt-2 btnspecific"
             disabled={isAttendButtonDisabled} 
             style={{ backgroundColor: isAttendButtonDisabled ? '#6164f2' : '##6164f4' }} // Change the color based on the disabled state
