@@ -233,7 +233,7 @@ export const ReactFinalFormDemo = () => {
     console.log("Sending data:", data);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxgK3gjbd_SfMZRNzcQRCZrYOEkRk2mxtREgJzZEN8Bz6BHjyZVQoMTqb2A2txJpodO/exec",
+      "https://script.google.com/macros/s/AKfycbxqqo_2Ipx2uYRW4Bb9I3T1F15QsegwWNZ3RStg7abDREqaLvdApQjY6j73Egpf-jLqnw/exec",
       {
         method: "POST", 
         headers: {
@@ -275,7 +275,7 @@ export const ReactFinalFormDemo = () => {
        <div className="header">
         <img className="imgheader" src="https://na.baps.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero2.79f635ad.jpg&w=3840&q=75" alt="HeaderImage"  />
         <div className="header-text">
-        <h1 className="RegText"> Sabha Registration</h1>
+        <h1 className="RegText"> Event Registration</h1>
         </div>
       </div>
 
@@ -315,7 +315,7 @@ export const ReactFinalFormDemo = () => {
             }}
             validate={validate}
             render={({ handleSubmit }) => (
-              <form action="https://script.google.com/macros/s/AKfycbxgK3gjbd_SfMZRNzcQRCZrYOEkRk2mxtREgJzZEN8Bz6BHjyZVQoMTqb2A2txJpodO/exec" method="post" className="p-fluid netlify">
+              <form action="https://script.google.com/macros/s/AKfycbxqqo_2Ipx2uYRW4Bb9I3T1F15QsegwWNZ3RStg7abDREqaLvdApQjY6j73Egpf-jLqnw/exec" method="post" className="p-fluid netlify">
                 <div style={{ display: "flex", gap: "10px" }}>
                   <Field
                     name="FirstName"
@@ -652,9 +652,9 @@ export const ReactFinalFormDemo = () => {
         <div className="textsfoot">
        
         <li className="Fmail" >
-  <a className="Fmail" href="mailto:coming2canada@samp.ca">
+  <a className="Fmail" href="mailto:f@d.ca">
     <FontAwesomeIcon icon={faEnvelope} />
-    &nbsp; coming2canada@samp.ca
+    &nbsp; Yourmail@email.ca
   </a>
 </li>
 
@@ -668,7 +668,7 @@ export const ReactFinalFormDemo = () => {
 </li>
 
         </div>
-        <img src="https://www.neasdentemple.org/footer/bapsLogo.png" alt="FooterImage" />
+        <img src="https://unblast.com/wp-content/uploads/2023/07/logo-mockup-2.jpg" alt="FooterImage" />
       </div>
     </div>
   );
