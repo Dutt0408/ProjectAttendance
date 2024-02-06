@@ -42,7 +42,7 @@ function PhoneNumberCheck({ onConfirmation }) {
     setPhoneNumber(phoneNumber);
 
     try {
-      const response = await fetch(`https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec?PhoneNumber=${phoneNumber}`);
+      const response = await fetch(`https://script.google.com/macros/s/AKfycbxCEhe3zCCFgNZpZP-QGK_cfNQdlkzTWyNXyB5CqB7HLO2Ggr4PmnfFBndIRu8IOaky/exec?PhoneNumber=${phoneNumber}`);
       const data = await response.json();
 
       if (data.exists) {
@@ -79,7 +79,7 @@ function PhoneNumberCheck({ onConfirmation }) {
        <div className="header">
         <img className="imgheader" src="https://na.baps.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero2.79f635ad.jpg&w=3840&q=75" alt="HeaderImage"  />
         <div className="header-text">
-        <h1 className="RegText">Sabha Attendance</h1>
+        <h1 className="RegText">Event Attendance</h1>
         </div>
       </div>
       <div className="InputForm">
@@ -92,7 +92,7 @@ function PhoneNumberCheck({ onConfirmation }) {
         render={({ handleSubmit }) => (
           <form
             
-            action="https://script.google.com/macros/s/AKfycbw_fjR821w3K0svIiBv4ELBqKVq0oya3_7-ZZpka0EbLAe_vbD3zApepes_RsKPg19I/exec"
+            action="https://script.google.com/macros/s/AKfycbxCEhe3zCCFgNZpZP-QGK_cfNQdlkzTWyNXyB5CqB7HLO2Ggr4PmnfFBndIRu8IOaky/exec"
             method="post"
             className="p-fluid netlify"
            
@@ -177,9 +177,9 @@ function PhoneNumberCheck({ onConfirmation }) {
         <div className="textsfoot">
        
         <li className="Fmail" >
-  <a className="Fmail" href="mailto:coming2canada@samp.ca">
+  <a className="Fmail" href="mailto:xyz">
     <FontAwesomeIcon icon={faEnvelope} />
-    &nbsp; coming2canada@samp.ca
+    &nbsp; emailhere@email.com
   </a>
 </li>
 
@@ -193,7 +193,7 @@ function PhoneNumberCheck({ onConfirmation }) {
 </li>
 
         </div>
-        <img src="https://www.neasdentemple.org/footer/bapsLogo.png" alt="FooterImage" />
+        <img src="https://unblast.com/wp-content/uploads/2023/07/logo-mockup-2.jpg" alt="FooterImage" />
       </div>
     </div>
   );
